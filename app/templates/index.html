@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>File browse..</title>
+</head>
+<body>
+	{% if form %}
+	<form method="post" action="" enctype="multipart/form-data">
+		{{form.hidden_tag()}}
+		{{ form.csrf }}
+		<p>{{form.file_upload()}} {{form.submit()}}</p>
+
+	</form>
+	{% else %}
+		<p>{{message}}</p>
+	{% endif %}
+
+</body>
+</html>
